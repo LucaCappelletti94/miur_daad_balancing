@@ -46,7 +46,7 @@ Testing dataset balancing techniques from previous works.
     :alt: Pypi project
 
 .. |downloads| image:: https://pepy.tech/badge/miur_daad_balancing
-    :target: https://pepy.tech/badge/miur_daad_balancing
+    :target: https://pepy.tech/badge/miur-daad-balancing
     :alt: Pypi total project downloads 
 
 .. |codacy|  image:: https://api.codacy.com/project/badge/Grade/b4a7c72f058b433597426fa696d71539

@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def sampling_class_portion(data, classes, others=None, class_portion=None, rng=np.random.RandomState(100)):
+def sampling_class_portion(data, classes, others=None, class_portion=None):
     """
     Sampling data points in each class to keep a given portion among classes.
     class_portion: dict, the portion for each class, each value should be at least 1, e.g. class_portion={"class0":5,"class1":1,"class3":2}
@@ -27,7 +27,7 @@ def sampling_class_portion(data, classes, others=None, class_portion=None, rng=n
         ind_this_num = indices_range[indices == i]
         replacetf = True if sample_sizes[u[i]] < (
             size_min*class_portion[u[i]]) else False
-        ind_this_reduced = ind_this_num[rng.choice(
+        ind_this_reduced = ind_this_num[np.random.choice(
             sample_sizes[u[i]], size=size_min*class_portion[u[i]], replace=replacetf)]
         indices_all = np.append(indices_all, ind_this_reduced)
 

@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def truncate_sample_size(data, classes, others=None, max_size_given=None, rng=np.random.RandomState(100)):
+def truncate_sample_size(data, classes, others=None, max_size_given=None):
     """
     Balance sample size of a data set among classes.
 
@@ -42,7 +42,6 @@ def truncate_sample_size(data, classes, others=None, max_size_given=None, rng=np
         sample_sizes.append(sample_size_this)
     sample_sizes = np.array(sample_sizes, dtype=int)
 
-    size_min = np.amin(sample_sizes)  # smallest sample size
     size_max = np.amax(sample_sizes)  # largest sample size
 
     if size_max < max_size_given:
@@ -54,7 +53,7 @@ def truncate_sample_size(data, classes, others=None, max_size_given=None, rng=np
 
     for i in range(num_u):
         ind_this_num = indices_range[indices == i]
-        ind_this_reduced = ind_this_num[rng.choice(
+        ind_this_reduced = ind_this_num[np.random.choice(
             len(ind_this_num), size=sample_sizes[i], replace=False)]
         indices_all = np.append(indices_all, ind_this_reduced)
 
