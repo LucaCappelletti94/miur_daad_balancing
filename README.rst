@@ -18,7 +18,42 @@ Since some software handling coverages sometime get slightly different results, 
 
 |coveralls| |sonar_coverage| |code_climate_coverage|
 
-Testing dataset balancing techniques from previous works.
+Usage
+----------------------------------------------
+Three balancing methods are available for the MIUR-DAAD project:
+
+Umbalanced
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This method just leaves the data as-is, and is used more as callback usefull to uniform the pipeline:
+
+.. code:: python
+
+    from miur_daad_balancing import umbalanced
+    
+    training, testing = generate_my_data(...)
+    balanced_training, balanced_testing = umbalanced(training, testing)
+
+Balanced
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Applies a maximum threshold to every class in the training set as specified in the default package settings (3000):
+
+.. code:: python
+
+    from miur_daad_balancing import balanced
+    
+    training, testing = generate_my_data(...)
+    balanced_training, balanced_testing = balanced(training, testing)
+
+Full Balanced
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Applies a maximum threshold to every class in the training set and balances to some default proportions the testing set:
+
+.. code:: python
+
+    from miur_daad_balancing import full_balanced
+    
+    training, testing = generate_my_data(...)
+    balanced_training, balanced_testing = full_balanced(training, testing)
 
 
 .. |travis| image:: https://travis-ci.org/LucaCappelletti94/miur_daad_balancing.png
