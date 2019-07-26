@@ -1,6 +1,6 @@
 miur_daad_balancing
 =========================================================================================
-|travis| |sonar_quality| |sonar_maintainability| |codacy| |code_climate_maintainability| |pip| |downloads|
+|travis| |sonar_quality| |sonar_maintainability| |codacy| |code_climate_maintainability| |pip|
 
 Testing dataset balancing techniques from previous works.
 
@@ -79,10 +79,6 @@ Applies a maximum threshold to every class in the training set and balances to s
 .. |pip| image:: https://badge.fury.io/py/miur_daad_balancing.svg
     :target: https://badge.fury.io/py/miur_daad_balancing
     :alt: Pypi project
-
-.. |downloads| image:: https://pepy.tech/badge/miur_daad_balancing
-    :target: https://pepy.tech/badge/miur-daad-balancing
-    :alt: Pypi total project downloads 
 
 .. |codacy|  image:: https://api.codacy.com/project/badge/Grade/b4a7c72f058b433597426fa696d71539
     :target: https://www.codacy.com/app/LucaCappelletti94/miur_daad_balancing?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LucaCappelletti94/miur_daad_balancing&amp;utm_campaign=Badge_Grade
