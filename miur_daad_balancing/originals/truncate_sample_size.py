@@ -1,7 +1,7 @@
 import numpy as np
+from typing import List
 
-
-def truncate_sample_size(data, classes, others=None, max_size_given=None):
+def truncate_sample_size(data:List[np.ndarray], classes, others=None, max_size_given=None):
     """
     Balance sample size of a data set among classes.
 
@@ -58,8 +58,10 @@ def truncate_sample_size(data, classes, others=None, max_size_given=None):
         indices_all = np.append(indices_all, ind_this_reduced)
 
     # reduce the data
-    data = data[indices_all, :]
+    data = [
+        d[indices_all, :] for d in data
+    ]
     classes = classes[indices_all]
     if np.any(others):
         others = others[indices_all]
-    return data, classes, indices_all, others
+    return data, classes
