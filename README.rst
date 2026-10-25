@@ -1,6 +1,6 @@
 miur_daad_balancing
 =========================================================================================
-|travis| |sonar_quality| |sonar_maintainability| |codacy| |code_climate_maintainability| |pip|
+|travis| |codacy| |code_climate_maintainability| |pip|
 
 Testing dataset balancing techniques from previous works.
 
@@ -16,7 +16,7 @@ Tests Coverage
 ----------------------------------------------
 Since some software handling coverages sometime get slightly different results, here's three of them:
 
-|coveralls| |sonar_coverage| |code_climate_coverage|
+|coveralls| |code_climate_coverage|
 
 Usage
 ----------------------------------------------
@@ -59,18 +59,6 @@ Applies a maximum threshold to every class in the training set and balances to s
 .. |travis| image:: https://travis-ci.org/LucaCappelletti94/miur_daad_balancing.png
    :target: https://travis-ci.org/LucaCappelletti94/miur_daad_balancing
    :alt: Travis CI build
-
-.. |sonar_quality| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_miur_daad_balancing&metric=alert_status
-    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_miur_daad_balancing
-    :alt: SonarCloud Quality
-
-.. |sonar_maintainability| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_miur_daad_balancing&metric=sqale_rating
-    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_miur_daad_balancing
-    :alt: SonarCloud Maintainability
-
-.. |sonar_coverage| image:: https://sonarcloud.io/api/project_badges/measure?project=LucaCappelletti94_miur_daad_balancing&metric=coverage
-    :target: https://sonarcloud.io/dashboard/index/LucaCappelletti94_miur_daad_balancing
-    :alt: SonarCloud Coverage
 
 .. |coveralls| image:: https://coveralls.io/repos/github/LucaCappelletti94/miur_daad_balancing/badge.svg?branch=master
     :target: https://coveralls.io/github/LucaCappelletti94/miur_daad_balancing?branch=master
