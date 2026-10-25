@@ -2,11 +2,6 @@ dist: trusty
 sudo: false
 git:
   depth: false
-addons:
-  sonarcloud:
-    organization: lucacappelletti94-github
-    token:
-      secure: tg8ZfL00gZAcOSpBM/WFRsNcHI2qRd87fMjTfiu4/xZCw2fEyied+q+YQb9B9kvPwTla5vSFCVOI3uDSNecx+OIPyf5CzDyzKzsXtgTZTn+ite4cTfXPaT4RMAupOSujNKam9j3d1jj9dLjPrba/nUgroiOmFPjhGe30AuOU9fjdEqSfNVgSSnmaRQ0ubpzwHbtSP5vK84Gr1sDZcQGrVxKWW3Ev352mdhiFOoJv9bRcjKn0GAhUNCOKTKIkodBOLVW4XGjd1TBAB0UhNEkHZbG3ADvRWZkKBQ5rL93PNA6hzRB8C8aW1wGzhIhR8egdrc2beBm9b4AwfGaUxPCayfqejlY1+IVsh73dT7Kt/ed2eurTkUlSMRDmUWu/p7iKt0J1zq53nRMmx8TZ+R4gYKDEKXy4fZOAFU96pu+TLj25Z4zomQ4dsM82Qjnlk6dHQgU7EfG6OhxVjn8h9aCxTH8DuHnhWNMxePq68dzPs9ilhQfTHs7xhcJPRcGDJnDsto3LeAyxrKIHi6JwEWv2UWn8eJTDIdtgZNncvIBUryECb+l3dk+RZIyzyj6jZKag13JE4vJtTjHXOJEAJdoAdqzVjUrpQeJcQwR5NKn735+JxNW/2loNABQ+uOE56xUi243ARr1Tv+AW+7Y5v/pb6Wj3bqMQ23Gn0cw9pgOGSDE=
 language: python
 python:
 - '3.6'
@@ -28,7 +23,6 @@ script:
 - coverage combine --append || true
 - coverage report
 - coverage xml
-- sonar-scanner
 after_success:
 - coveralls
 - python-codacy-coverage -r coverage.xml
